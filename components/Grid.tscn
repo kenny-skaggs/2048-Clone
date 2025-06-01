@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0k8iq0gbuv16"]
+
+[ext_resource type="Script" uid="uid://cikqb3h2ic47m" path="res://components/grid.gd" id="1_uwvna"]
+[ext_resource type="Script" uid="uid://dejesv0ggybmu" path="res://components/grid_row.gd" id="3_uwvna"]
+
+[node name="Grid" type="Node2D"]
+script = ExtResource("1_uwvna")
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 600.0
+offset_bottom = 900.0
+color = Color(0.156079, 0.310233, 0.286515, 1)
+
+[node name="Slots" type="Node" parent="."]
+
+[node name="GridRow" type="Node2D" parent="Slots"]
+position = Vector2(12, 10)
+script = ExtResource("3_uwvna")
+metadata/_custom_type_script = "uid://dejesv0ggybmu"
+
+[node name="GridRow2" type="Node2D" parent="Slots"]
+position = Vector2(12, 130)
+script = ExtResource("3_uwvna")
+metadata/_custom_type_script = "uid://dejesv0ggybmu"
+
+[node name="GridRow3" type="Node2D" parent="Slots"]
+position = Vector2(12, 260)
+script = ExtResource("3_uwvna")
+metadata/_custom_type_script = "uid://dejesv0ggybmu"
+
+[node name="GridRow4" type="Node2D" parent="Slots"]
+position = Vector2(12, 390)
+script = ExtResource("3_uwvna")
+metadata/_custom_type_script = "uid://dejesv0ggybmu"
+
+[node name="GridRow5" type="Node2D" parent="Slots"]
+position = Vector2(12, 520)
+script = ExtResource("3_uwvna")
+metadata/_custom_type_script = "uid://dejesv0ggybmu"
+
+[node name="Tiles" type="Node" parent="."]
+
+[node name="SlideDownTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="TileSpawnTimer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="SlideDownTimer" to="." method="_on_slide_down_timer_timeout"]
+[connection signal="timeout" from="TileSpawnTimer" to="." method="_on_tile_spawn_timer_timeout"]

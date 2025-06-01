@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpmr5dhoyxhjl"]
+
+[ext_resource type="Script" uid="uid://beo5rc6kk3nh4" path="res://components/tile.gd" id="1_ccwu1"]
+
+[node name="Tile" type="Node2D" groups=["tiles"]]
+script = ExtResource("1_ccwu1")
+value_colors = Dictionary[int, Color]({
+1: Color(0.509286, 0.509286, 0.509286, 1),
+2: Color(0.525261, 0.431857, 0.585325, 1),
+4: Color(0.440564, 0.542006, 0.443994, 1),
+8: Color(0.661073, 0.452833, 0.369784, 1),
+16: Color(0.515202, 0.39888, 0.657589, 1),
+32: Color(0.2482, 0.69788, 0.73, 1),
+64: Color(0.491133, 0.53, 0.2385, 1),
+128: Color(0.69, 0.32499, 0.2139, 1),
+256: Color(0.621621, 0.334633, 0.910045, 1),
+512: Color(0.1872, 0.51576, 0.72, 1),
+1024: Color(0.1056, 0.44, 0.367547, 1),
+2048: Color(0.581253, 0.71, 0.2556, 1)
+})
+metadata/_custom_type_script = "uid://beo5rc6kk3nh4"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 100.0
+offset_bottom = 100.0
+color = Color(0.355897, 0.483723, 0.61239, 1)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 48
+text = "32"
+horizontal_alignment = 1

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bo8ervc8fh5so"]
+
+[ext_resource type="Script" uid="uid://h7a783bbvy3d" path="res://components/slot.gd" id="1_thmsx"]
+
+[node name="Slot" type="ColorRect"]
+offset_right = 110.0
+offset_bottom = 110.0
+color = Color(0.194647, 0.136127, 0.111582, 1)
+script = ExtResource("1_thmsx")
+metadata/_custom_type_script = "uid://cikqb3h2ic47m"
